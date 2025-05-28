@@ -223,7 +223,7 @@
 </head>
 <body>
   <!-- Banner -->
-  <div class="banner">
+  <div class="banner" role="img" aria-label="3D rendering of a man walking up a staircase while using the Adapt Stairlift’s stair assist bar.">
     <h1 id="main-title">Adapt Stairlift</h1>
     <p>Email: <a href="mailto:stairlift@solution4u.com" style="color: white; text-decoration: underline;">stairlift@solution4u.com</a></p>
   </div>
@@ -233,7 +233,7 @@
     <div class="content">
       <!-- Overview Section -->
       <div class="overview-image">
-        <img src="orbit.gif" alt="Spinning Product GIF" />
+        <img src="orbit.gif" alt="Animated 360° front-facing view of a beige stairlift chair slowly rotating in place." />
       </div>
       <div class="overview-text">
         <h2>Project Summary</h2>
@@ -260,13 +260,13 @@
 
     <!-- Image Carousel -->
     <div class="carousel">
-      <img src="1.jpg" alt="Render 1" onclick="openLightbox(0)">
-      <img src="2.jpg" alt="Render 2" onclick="openLightbox(1)">
-      <img src="3.jpg" alt="Render 3" onclick="openLightbox(2)">
-      <img src="4.jpg" alt="Render 4" onclick="openLightbox(3)">
-      <img src="5.jpg" alt="Render 5" onclick="openLightbox(4)">
-      <img src="6.jpg" alt="Render 6" onclick="openLightbox(5)">
-      <img src="7.jpg" alt="Render 7" onclick="openLightbox(6)">
+      <img src="1.jpg" alt="3D rendering of a man seated on a stairlift at the base of an indoor straight staircase." onclick="openLightbox(0)">
+      <img src="2.jpg" alt="Over-the-shoulder view of a man gripping the stairlift’s handrail control, preparing to ascend a staircase." onclick="openLightbox(1)">
+      <img src="3.jpg" alt="3D perspective of a man reaching the top of a staircase and using the stair assist bar of a stairlift." onclick="openLightbox(2)">
+      <img src="4.jpg" alt="3D perspective of a man descending a staircase while using the stair assist bar of a stairlift." onclick="openLightbox(3)">
+      <img src="5.jpg" alt="Close-up of two hands operating the stairlift’s handrail control bar, showing up and down arrow buttons." onclick="openLightbox(4)">
+      <img src="6.jpg" alt="Standalone 3D rendering of a beige stairlift chair with armrests, footrest and vertical support rail (no person)." onclick="openLightbox(5)">
+      <img src="7.jpg" alt="Side-angle 3D view of a stairlift chair installed on a staircase, showing the motor housing and rail." onclick="openLightbox(6)">
     </div>
 
     <!-- Lightbox View -->
@@ -298,7 +298,7 @@
             </p>
         </div>
         <div class="biography-image">
-            <img src="profile.jpg" alt="George Barrass">
+            <img src="profile.jpg" alt="Black-and-white portrait of a young man with short hair, wearing a hoodie, looking directly at the camera against a solid black background.">
         </div>
     </div>
 
@@ -390,7 +390,17 @@
       }
     }
 
-    const images = ['1h.jpg', '2h.jpg', '3h.jpg', '4h.jpg', '5h.jpg', '6h.jpg', '7h.jpg'];
+    const altTexts = [
+    "3D rendering of a man seated on a stairlift at the base of an indoor straight staircase.",
+    "Over-the-shoulder view of a man gripping the stairlift’s handrail control, preparing to ascend a staircase.",
+    "3D perspective of a man reaching the top of a staircase and using the stair assist bar of a stairlift.",
+    "3D perspective of a man descending a staircase while using the stair assist bar of a stairlift.",
+    "Close-up of two hands operating the stairlift’s handrail control bar, showing up and down arrow buttons.",
+    "Standalone 3D rendering of a beige stairlift chair with armrests, footrest and vertical support rail (no person).",
+    "Side-angle 3D view of a stairlift chair installed on a staircase, showing the motor housing and rail."
+];
+
+const images = ['1h.jpg', '2h.jpg', '3h.jpg', '4h.jpg', '5h.jpg', '6h.jpg', '7h.jpg'];
     let currentImageIndex = 0;
     const lightboxSlider = document.getElementById('lightboxSlider');
 
@@ -400,7 +410,7 @@
       const slider = document.getElementById('lightboxSlider');
       slider.innerHTML = images.map((src, i) => `
         <div style="flex-shrink: 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
-          <img src="${src}" style="max-width: 95vw; max-height: 90vh; object-fit: contain; user-select: none; margin: auto; cursor: default;" onclick="handleImageClick(event)">
+          <img src="${src}" alt="${altTexts[i]}" style="max-width: 95vw; max-height: 90vh; object-fit: contain; user-select: none; margin: auto; cursor: default;" onclick="handleImageClick(event)">
         </div>`).join('');
       slider.style.transform = `translateX(-${index * 100}vw)`;
       document.getElementById('lightbox').style.display = 'block';
