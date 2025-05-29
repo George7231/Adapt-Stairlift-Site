@@ -8,218 +8,50 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     /* Prevent image and button text selection */
-    img, button, span {
-      user-select: none;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-    }
+    img,button,span { user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
 
     /* Basic page setup */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-      height: 100%;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+    html,body { margin: 0; padding: 0; font-family: Arial, sans-serif; overflow-x: hidden; height: 100%; }
+    body { display: flex; flex-direction: column; min-height: 100vh; }
 
     /* Fullscreen banner section */
-    .banner {
-      position: relative;
-      min-height: 100vh;
-      background: url('banner.jpg') center center/cover no-repeat fixed;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
-
-    /* Overlay to improve text readability on busy backgrounds */
-    .banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.2);
-      z-index: 0;
-    }
+    .banner { position: relative; min-height: 100vh; background: url('banner.jpg') center center/cover no-repeat fixed; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; }
+    .banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); z-index: 0; }
 
     /* Banner text styling */
-    .banner h1, .banner p {
-      position: relative;
-      z-index: 1;
-      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-    }
+    .banner h1, .banner p { position: relative; z-index: 1; text-shadow: 3px 3px 6px rgba(0,0,0,0.6); }
+    .banner h1 { font-family: 'Bell MT', serif; font-size: clamp(1rem,60vw,9rem); color: #fff; margin: 0; transition: opacity .5s; }
+    .banner p { font-size: 16px; margin-top: 10px; color: #fff; }
 
-    .banner h1 {
-      font-family: 'Bell MT', serif;
-      font-size: clamp(1rem, 60vw, 9rem);
-      color: #ffffff;
-      margin: 0;
-      transition: opacity 0.5s;
-    }
-
-    .banner p {
-      font-size: 16px;
-      margin-top: 10px;
-      color: white;
-    }
-
-    .main {
-      flex: 1;
-    }
+    /* Main container */
+    .main { flex: 1; }
 
     /* Overview section */
-    .content {
-      position: relative;
-      padding: 40px 5%;
-    }
-
-    .overview-text {
-        margin-left: 260px;
-        margin-right: 0;
-    }
-
-    .overview-image {
-        position: absolute;
-        top: 40px;
-        left: 5%;
-        right: auto;
-        height: calc(100% - 40px);
-        width: clamp(120px, 30%, 200px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    
-    .overview-image img {
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .overview-text h2 {
-      font-size: 28px;
-      color: black;
-      margin-bottom: 10px;
-    }
+    .content { position: relative; padding: 40px 5%; }
+    .overview-text { margin-left: 260px; }
+    .overview-image { position: absolute; top: 40px; left: 5%; height: calc(100% - 40px); width: clamp(120px,30%,200px); display: flex; align-items: center; justify-content: center; }
+    .overview-image img { max-height: 100%; width: auto; object-fit: contain; }
+    .overview-text h2 { font-size: 28px; color: #000; margin-bottom: 10px; }
 
     /* Image carousel */
-    .carousel {
-      background-color: #f0f0f0;
-      padding: 40px 5%;
-      display: flex;
-      overflow-x: auto;
-      gap: 10px;
-      scroll-snap-type: x mandatory;
-    }
-
-    .carousel img {
-      width: 300px;
-      height: auto;
-      scroll-snap-align: start;
-      border-radius: 10px;
-      flex-shrink: 0;
-    }
+    .carousel { background-color: #f0f0f0; padding: 40px 5%; display: flex; overflow-x: auto; gap: 10px; scroll-snap-type: x mandatory; }
+    .carousel img { width: 300px; height: auto; scroll-snap-align: start; border-radius: 10px; flex-shrink: 0; }
 
     /* Biography section */
-    .biography {
-        position: relative;
-        padding: 40px 5%;
-    }
-
-    .biography-text {
-        margin-right: 450px;
-    }
-
-    .biography-image {
-        position: absolute;
-        top: 40px;
-        right: 5%;
-        left: auto;
-        height: calc(100% - 60px);
-        width: clamp(120px, 30%, 200px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .biography-image img {
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-    }
+    .biography { position: relative; padding: 40px 5%; }
+    .biography-text { margin-right: 450px; }
+    .biography-image { position: absolute; top: 40px; right: 5%; height: calc(100% - 60px); width: clamp(120px,30%,200px); display: flex; align-items: center; justify-content: center; }
+    .biography-image img { max-height: 100%; width: auto; object-fit: contain; }
 
     /* Footer */
-    .footer {
-      background-color: #224D91;
-      color: white;
-      text-align: center;
-      padding: 10px 5%;
-      font-size: 14px;
-      margin-top: auto;
-    }
+    .footer { background-color: #224D91; color: #fff; text-align: center; padding: 10px 5%; font-size: 14px; margin-top: auto; }
 
     /* Responsive layout */
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-      }
-    }
-
-    /* ======= Responsive: stack vertically on narrow or portrait viewports ======= */
-    @media (max-width: 768px), (orientation: portrait) {
-    /* Make both sections flow top-to-bottom */
-    .content,
-    .biography {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: static;       /* disable absolute positioning */
-        padding: 40px 5%;
-    }
-
-    /* Reset any side-margins on the text */
-    .overview-text,
-    .biography-text {
-        margin: 0;
-        width: 100%;
-    }
-
-    /* Let the image wrapper sit in the flow, full width */
-    .overview-image,
-    .biography-image {
-        position: static;      /* no longer absolute */
-        order: -1;             /* show the image *above* the text */
-        width: 100%;           /* fill the container */
-        max-width: 600px;      /* optional cap */
-        margin-bottom: 20px;   /* spacing between image and text */
-        display: flex;
-        justify-content: center;
-    }
-
-    /* Ensure the img scales nicely to its wrapper */
-    .overview-image img,
-    .biography-image img {
-        width: 100%;
-        height: auto;
-        max-height: none;      /* remove the old cap */
-        object-fit: contain;
-    }
+    @media (max-width:768px), (orientation:portrait) {
+      .content, .biography { display: flex; flex-direction: column; align-items: center; position: static; padding: 40px 5%; }
+      .overview-text, .biography-text { margin: 0; width: 100%; }
+      .overview-image, .biography-image { position: static; order: -1; width: 100%; max-width: 600px; margin-bottom: 20px; display: flex; justify-content: center; }
+      .overview-image img, .biography-image img { width: 100%; height: auto; object-fit: contain; }
     }
   </style>
 </head>
@@ -236,29 +68,23 @@
   <main>
     <div class="main">
       <div class="content">
+        
         <!-- Overview Section -->
         <div class="overview-image">
           <img src="orbit.gif" alt="Animated 360° front-facing view of a beige stairlift chair slowly rotating in place." />
         </div>
         <div class="overview-text">
           <h2>Project Summary</h2>
-
           <p>Adapt Stairlift is a set of modular enhancements designed to improve the functionality, safety, and user experience of existing stairlift designs. Rather than replacing core components like the rail or carriage, these adaptations are intended for integration by stairlift manufacturers with minimal modification.</p>
-
           <p>User Research identified two recurring issues:</p>
           <ul>
             <li>Unsafe transport of personal items during stairlift use</li>
             <li>User reluctance due to perceived loss of independence</li>
           </ul>
-
           <p>Secure Luggage Solutions include a removable basket under the seat and a slide-out shelf, allowing users to carry personal items safely.</p>
-
           <p>Integrated Stair Assist Bar allows users with partial mobility to walk up and down stairs with support. It encourages physical activity and confidence, with intuitive movement controls and secure locking positions.</p>
-
           <p>Safety & Compliance: A robust sensor system is designed to comply with BS EN 81-40. Custom seat and armrest hinges are also included to support the modifications.</p>
-
           <p>Design & Materials: All components are made from durable, visually appealing materials that blend seamlessly into home environments.</p>
-
           <p>Adapt Stairlift offers manufacturers a versatile product upgrade that supports a broader range of user needs, encourages earlier adoption, and directly addresses real-world problems with practical, safety-first solutions.</p>
         </div>
       </div>
