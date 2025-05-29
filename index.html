@@ -420,7 +420,7 @@ const images = ['1h.jpg', '2h.jpg', '3h.jpg', '4h.jpg', '5h.jpg', '6h.jpg', '7h.
       const slider = document.getElementById('lightboxSlider');
       slider.innerHTML = images.map((src, i) => `
         <div style="flex-shrink: 0; width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
-          <img src="${src}" alt="${altTexts[i]}" style="max-width: 95vw; max-height: 90vh; object-fit: contain; user-select: none; margin: auto; cursor: default;" onclick="handleImageClick(event)">
+          <img src="${src}" alt="${altTexts[i]}" style="max-width: 95vw; max-height: 90vh; object-fit: contain; user-select: none; margin: auto; cursor: default;">
         </div>`).join('');
       slider.style.transform = `translateX(-${index * 100}vw)`;
       document.getElementById('lightbox').style.display = 'block';
