@@ -144,26 +144,6 @@
 
   <!-- Scripts -->
   <script>
-    // Fade out the title on scroll
-    const title = document.getElementById('main-title');
-    const fadeStart = 0;
-    const fadeEnd = 200; // adjust to taste
-
-    window.addEventListener('scroll', function() {
-        const scrollY = window.scrollY;
-        let opacity;
-
-        if (scrollY <= fadeStart) {
-        opacity = 1;
-        } else if (scrollY >= fadeEnd) {
-        opacity = 0;
-        } else {
-        opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
-        }
-        title.style.opacity = opacity;
-    });
-  </script>
-  <script>
     // Scroll wheel to navigate lightbox images
     document.getElementById('lightbox').addEventListener('wheel', function(e) {
       e.preventDefault();
