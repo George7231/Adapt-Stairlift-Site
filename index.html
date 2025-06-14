@@ -144,8 +144,7 @@
 
   <!-- Scripts -->
   <script>
-    // Fade out the title on scroll (not working)
-    document.addEventListener('DOMContentLoaded', function() {
+    // Fade out the title on scroll
     const title = document.getElementById('main-title');
     const fadeStart = 0;
     const fadeEnd = 200; // adjust to taste
@@ -162,7 +161,6 @@
         opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
         }
         title.style.opacity = opacity;
-    });
     });
   </script>
   <script>
