@@ -1,0 +1,16 @@
+{
+  "name": "adapt-stairlift-site",
+  "version": "1.0.0",
+  "description": "**Innovative stairlift enhancements for improved mobility, safety, and independence.**   Major project by George Barrass, University of Nottingham.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}

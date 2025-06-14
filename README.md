@@ -15,6 +15,7 @@ Major project by George Barrass, University of Nottingham.
   - [Screenshots](#screenshots)
   - [Getting Started](#getting-started)
   - [Usage](#usage)
+  - [Running Tests](#running-tests)
   - [Accessibility](#accessibility)
   - [Author \& Credits](#author--credits)
   - [License](#license)
@@ -86,6 +87,16 @@ No build steps or server required.
 - Browse the project summary and features on the homepage.
 - Use the **image carousel** to explore product images and scenarios.
 - Select any image for a larger view in the lightbox. Navigate using arrow keys, mouse, or swipe gestures on touch devices.
+
+---
+
+## Running Tests
+
+```bash
+npm test
+```
+
+Run the above command after installing dependencies with `npm install`.
 
 ---
 
