@@ -1,1 +1,5 @@
 main copy.html
+
+# Ignore Node.js tests
+__tests__/
+*.test.js
