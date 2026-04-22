@@ -11,7 +11,6 @@ Major project by George Barrass, University of Nottingham.
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Demo](#demo)
-  - [Screenshots](#screenshots)
   - [Accessibility](#accessibility)
   - [License](#license)
   - [Contact](#contact)
@@ -31,20 +30,6 @@ The project addresses real-world needs, focusing on:
 ## Demo
 
 You can try the site by downloading the files and opening `index.html` in your browser.
-
----
-
-## Screenshots
-
-| ![Stairlift 3D Render](1.jpg) | ![Stairlift Assist Bar](2.jpg) |
-|:--:|:--:|
-| *Seated stairlift at base of stairs* | *User gripping assist bar* |
-
-| ![Stairlift Top](3.jpg) | ![Stairlift Descending](4.jpg) |
-|:--:|:--:|
-| *User reaching top of stairs* | *User descending with assist bar* |
-
-*(See more in the in-app carousel.)*
 
 ---
 
