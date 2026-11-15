@@ -2,7 +2,7 @@
 
 **A website to showcase my University of Nottinghamn Product Design major project**
 
-The website has been intentionally kept as a single html file for all the html, css and js. This avoids unneccsiary complexity and is possible due to the clean and concise code.
+The website has been intentionally kept as a single html file for all the html, css and js. This avoids unneccesary complexity and is possible due to the clean and concise code.
 
 ## Project Overview
 
