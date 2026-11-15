@@ -1,21 +1,8 @@
-# Adapt Stairlift
+# Adapt Stairlift Website
 
-**Innovative stairlift enhancements for improved mobility, safety, and independence.**  
-Major project by George Barrass, University of Nottingham.
+**A website to showcase my University of Nottinghamn Product Design major project**
 
----
-
-## Table of Contents
-
-- [Adapt Stairlift](#adapt-stairlift)
-  - [Table of Contents](#table-of-contents)
-  - [Project Overview](#project-overview)
-  - [Demo](#demo)
-  - [Accessibility](#accessibility)
-  - [License](#license)
-  - [Contact](#contact)
-
----
+The website has been intentionally kept as a single html file for all the html, css and js. This avoids unneccsiary complexity and is possible due to the clean and concise code.
 
 ## Project Overview
 
@@ -25,13 +12,9 @@ The project addresses real-world needs, focusing on:
 - Safe transport of personal items during stairlift use.
 - User reluctance due to perceived loss of independence.
 
----
-
 ## Demo
 
 You can try the site by downloading the files and opening `index.html` in your browser.
-
----
 
 ## Accessibility
 
@@ -40,18 +23,8 @@ You can try the site by downloading the files and opening `index.html` in your b
 - Responsive layout for desktop and mobile devices.
 - Lightbox navigation supports keyboard and touch controls.
 
----
-
 ## License
 
 This project is licensed under the terms of the included [LICENSE](LICENSE) file.
-
----
-
-## Contact
-
-Through github only
-
----
 
 *Designed May 2025 | University of Nottingham | Product Design and Manufacture BEng*
